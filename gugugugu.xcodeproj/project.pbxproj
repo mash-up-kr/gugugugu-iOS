@@ -58,16 +58,32 @@
 		A56A26B224CC0BF0003E6553 /* gugugugu */ = {
 			isa = PBXGroup;
 			children = (
-				A56A26B324CC0BF0003E6553 /* AppDelegate.swift */,
-				A56A26B524CC0BF0003E6553 /* SceneDelegate.swift */,
+				A56A26CA24CC1AFA003E6553 /* Global */,
 				A56A26B724CC0BF0003E6553 /* FirstViewController.swift */,
 				A56A26B924CC0BF0003E6553 /* SecondViewController.swift */,
 				A56A26BB24CC0BF0003E6553 /* Main.storyboard */,
-				A56A26BE24CC0BF1003E6553 /* Assets.xcassets */,
+				A56A26C924CC1AB4003E6553 /* SupportingFiles */,
 				A56A26C024CC0BF1003E6553 /* LaunchScreen.storyboard */,
-				A56A26C324CC0BF1003E6553 /* Info.plist */,
 			);
 			path = gugugugu;
+			sourceTree = "<group>";
+		};
+		A56A26C924CC1AB4003E6553 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				A56A26BE24CC0BF1003E6553 /* Assets.xcassets */,
+				A56A26C324CC0BF1003E6553 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		A56A26CA24CC1AFA003E6553 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				A56A26B324CC0BF0003E6553 /* AppDelegate.swift */,
+				A56A26B524CC0BF0003E6553 /* SceneDelegate.swift */,
+			);
+			path = Global;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,7 +236,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -274,7 +290,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -291,7 +307,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = REPXTXVF2V;
-				INFOPLIST_FILE = gugugugu/Info.plist;
+				INFOPLIST_FILE = gugugugu/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,7 +327,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = REPXTXVF2V;
-				INFOPLIST_FILE = gugugugu/Info.plist;
+				INFOPLIST_FILE = gugugugu/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
