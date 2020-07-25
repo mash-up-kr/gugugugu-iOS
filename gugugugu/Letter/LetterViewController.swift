@@ -12,7 +12,12 @@ class LetterViewController: UIViewController {
     
     // MARK: - IBOutlet
     @IBOutlet weak var inputTextField: UITextField!
+    @IBOutlet weak var toAndTitleView: UIView!
+    @IBOutlet weak var letterCategoryLabel: UILabel!
+    @IBOutlet weak var letterToLabel: UILabel!
+    @IBOutlet weak var letterTitleLabel: UILabel!
     
+    @IBOutlet weak var toLabel: UILabel!
     
     // MARK: - IBAction
     @IBAction func backButtonTouchUpInside(_ sender: UIButton) {
@@ -24,23 +29,18 @@ class LetterViewController: UIViewController {
     
     // MARK: - Method
     private func setUp() {
-        addToolBar()
+        inputTextField.delegate = self
     }
     
-    private func addToolBar() {
-        let toolBarKeyboard = UIToolbar()
-        toolBarKeyboard.sizeToFit()
-        let doneButton = UIBarButtonItem(title: "확인", style: .done, target: self, action: #selector(doneButtonClicked))
+    private func whenToTextFieldIsFilled() {
         
+        toLabel.text = inputTextField.text
         
-        let flexibleButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        
-        toolBarKeyboard.items = [flexibleButton, doneButton]
-        inputTextField.inputAccessoryView = toolBarKeyboard
-    }
-    
-    @objc private func doneButtonClicked() {
-        print("Minho")
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
+            self.toLabel.frame.origin = CGPoint(x: self.letterToLabel.frame.origin.x, y: self.letterToLabel.frame.origin.y - 80)
+            self.toAndTitleView.sendSubviewToBack(self.toLabel)
+        }, completion: nil)
+        inputTextField.text = ""
     }
     
     
@@ -49,5 +49,14 @@ class LetterViewController: UIViewController {
         super.viewDidLoad()
         
         setUp()
+    }
+}
+
+// MARK: - UITextFieldDelegate
+extension LetterViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        whenToTextFieldIsFilled()
+        return true
     }
 }
