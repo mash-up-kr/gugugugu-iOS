@@ -18,7 +18,7 @@
 		A56A26D124CC26E2003E6553 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A56A26D024CC26E2003E6553 /* Home.storyboard */; };
 		A56A26D324CC30F2003E6553 /* LetterCoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56A26D224CC30F2003E6553 /* LetterCoverCell.swift */; };
 		A56A26D524CC7641003E6553 /* HomeTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56A26D424CC7641003E6553 /* HomeTitleView.swift */; };
-		E3C17A2324CCC5280083F54D /* LetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C17A2124CC28600083F54D /* LetterViewController.swift */; };
+		E3C17A2324CCC5280083F54D /* LetterToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C17A2124CC28600083F54D /* LetterToViewController.swift */; };
 		E3C17A2424CCC55F0083F54D /* Letter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3C17A1F24CC28360083F54D /* Letter.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +37,7 @@
 		A56A26D224CC30F2003E6553 /* LetterCoverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterCoverCell.swift; sourceTree = "<group>"; };
 		A56A26D424CC7641003E6553 /* HomeTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTitleView.swift; sourceTree = "<group>"; };
 		E3C17A1F24CC28360083F54D /* Letter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Letter.storyboard; sourceTree = "<group>"; };
-		E3C17A2124CC28600083F54D /* LetterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterViewController.swift; sourceTree = "<group>"; };
+		E3C17A2124CC28600083F54D /* LetterToViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterToViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				E3C17A1F24CC28360083F54D /* Letter.storyboard */,
-				E3C17A2124CC28600083F54D /* LetterViewController.swift */,
+				E3C17A2124CC28600083F54D /* LetterToViewController.swift */,
 			);
 			path = Letter;
 			sourceTree = "<group>";
@@ -197,7 +197,7 @@
 				A56A26D524CC7641003E6553 /* HomeTitleView.swift in Sources */,
 				A56A26BA24CC0BF0003E6553 /* SecondViewController.swift in Sources */,
 				A56A26B824CC0BF0003E6553 /* FirstViewController.swift in Sources */,
-				E3C17A2324CCC5280083F54D /* LetterViewController.swift in Sources */,
+				E3C17A2324CCC5280083F54D /* LetterToViewController.swift in Sources */,
 				A56A26B424CC0BF0003E6553 /* AppDelegate.swift in Sources */,
 				A56A26B624CC0BF0003E6553 /* SceneDelegate.swift in Sources */,
 				A56A26D324CC30F2003E6553 /* LetterCoverCell.swift in Sources */,

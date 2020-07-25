@@ -16,7 +16,7 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var letterWriteButton: UIButton!
 
     @IBAction func letterWriteButtonTouchUpInside(_ sender: UIButton) {
-        guard let viewController = UIStoryboard(name: "Letter", bundle: nil).instantiateViewController(withIdentifier: "Letter") as? LetterViewController else { return }
+        guard let viewController = UIStoryboard(name: "Letter", bundle: nil).instantiateViewController(withIdentifier: "Letter") as? LetterToViewController else { return }
         present(viewController, animated: true, completion: nil)
     }
     
