@@ -16,6 +16,8 @@
 		A56A26C224CC0BF1003E6553 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A56A26C024CC0BF1003E6553 /* LaunchScreen.storyboard */; };
 		A56A26CC24CC22A1003E6553 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56A26CB24CC22A1003E6553 /* HomeViewController.swift */; };
 		A56A26D124CC26E2003E6553 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A56A26D024CC26E2003E6553 /* Home.storyboard */; };
+		E3C17A2024CC28360083F54D /* Letter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3C17A1F24CC28360083F54D /* Letter.storyboard */; };
+		E3C17A2224CC28600083F54D /* LetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C17A2124CC28600083F54D /* LetterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		A56A26C324CC0BF1003E6553 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A56A26CB24CC22A1003E6553 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A56A26D024CC26E2003E6553 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		E3C17A1F24CC28360083F54D /* Letter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Letter.storyboard; sourceTree = "<group>"; };
+		E3C17A2124CC28600083F54D /* LetterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 				A56A26B724CC0BF0003E6553 /* FirstViewController.swift */,
 				A56A26B924CC0BF0003E6553 /* SecondViewController.swift */,
 				A56A26CF24CC232D003E6553 /* Home */,
+				E3C17A1E24CC28280083F54D /* Letter */,
 				A56A26BB24CC0BF0003E6553 /* Main.storyboard */,
 				A56A26C924CC1AB4003E6553 /* SupportingFiles */,
 				A56A26C024CC0BF1003E6553 /* LaunchScreen.storyboard */,
@@ -98,6 +103,15 @@
 				A56A26D024CC26E2003E6553 /* Home.storyboard */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		E3C17A1E24CC28280083F54D /* Letter */ = {
+			isa = PBXGroup;
+			children = (
+				E3C17A1F24CC28360083F54D /* Letter.storyboard */,
+				E3C17A2124CC28600083F54D /* LetterViewController.swift */,
+			);
+			path = Letter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +175,7 @@
 				A56A26C224CC0BF1003E6553 /* LaunchScreen.storyboard in Resources */,
 				A56A26BF24CC0BF1003E6553 /* Assets.xcassets in Resources */,
 				A56A26BD24CC0BF0003E6553 /* Main.storyboard in Resources */,
+				E3C17A2024CC28360083F54D /* Letter.storyboard in Resources */,
 				A56A26D124CC26E2003E6553 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,6 +191,7 @@
 				A56A26BA24CC0BF0003E6553 /* SecondViewController.swift in Sources */,
 				A56A26B824CC0BF0003E6553 /* FirstViewController.swift in Sources */,
 				A56A26B424CC0BF0003E6553 /* AppDelegate.swift in Sources */,
+				E3C17A2224CC28600083F54D /* LetterViewController.swift in Sources */,
 				A56A26B624CC0BF0003E6553 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
