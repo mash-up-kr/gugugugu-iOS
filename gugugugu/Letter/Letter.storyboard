@@ -21,32 +21,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gAa-iJ-JKd">
-                                <rect key="frame" x="0.0" y="114" width="414" height="80"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nO-VB-ACR">
-                                        <rect key="frame" x="37" y="40" width="0.0" height="0.0"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EEf-sT-xab">
-                                        <rect key="frame" x="61" y="40" width="0.0" height="0.0"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstItem="EEf-sT-xab" firstAttribute="leading" secondItem="1nO-VB-ACR" secondAttribute="trailing" constant="24" id="8bH-tO-Yt8"/>
-                                    <constraint firstItem="EEf-sT-xab" firstAttribute="bottom" secondItem="1nO-VB-ACR" secondAttribute="bottom" id="DQ0-b2-OiV"/>
-                                    <constraint firstAttribute="height" constant="80" id="SHE-eG-v1p"/>
-                                    <constraint firstItem="1nO-VB-ACR" firstAttribute="centerY" secondItem="gAa-iJ-JKd" secondAttribute="centerY" id="UCk-wh-aq9"/>
-                                    <constraint firstItem="1nO-VB-ACR" firstAttribute="leading" secondItem="gAa-iJ-JKd" secondAttribute="leading" constant="37" id="g43-ta-Cco"/>
-                                    <constraint firstItem="EEf-sT-xab" firstAttribute="top" secondItem="1nO-VB-ACR" secondAttribute="top" id="ihC-c0-zED"/>
-                                </constraints>
-                            </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EdP-da-kP6">
                                 <rect key="frame" x="0.0" y="194" width="414" height="668"/>
                                 <subviews>
@@ -72,17 +46,22 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2k-gT-Vmj">
-                                                <rect key="frame" x="171" y="236" width="46" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
-                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EnY-yN-OGe">
                                                 <rect key="frame" x="40" y="120" width="354" height="60"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uox-k0-tFx">
+                                                <rect key="frame" x="40" y="120" width="354" height="300"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="TRp-fA-22d"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
@@ -97,7 +76,10 @@
                                             <constraint firstAttribute="trailing" secondItem="HNp-MT-hqh" secondAttribute="trailing" constant="20" id="bNh-Nw-umm"/>
                                             <constraint firstItem="Wu6-o3-mAJ" firstAttribute="leading" secondItem="NUt-ae-3Eb" secondAttribute="leading" id="dn4-cv-S5Y"/>
                                             <constraint firstItem="EnY-yN-OGe" firstAttribute="trailing" secondItem="HNp-MT-hqh" secondAttribute="trailing" id="ebS-kD-VF5"/>
+                                            <constraint firstItem="uox-k0-tFx" firstAttribute="leading" secondItem="HNp-MT-hqh" secondAttribute="leading" id="hOz-Eg-Kra"/>
                                             <constraint firstItem="HNp-MT-hqh" firstAttribute="top" secondItem="Wu6-o3-mAJ" secondAttribute="top" id="ovD-Yw-jmP"/>
+                                            <constraint firstItem="uox-k0-tFx" firstAttribute="top" secondItem="HNp-MT-hqh" secondAttribute="top" id="s8r-eJ-Yx2"/>
+                                            <constraint firstItem="uox-k0-tFx" firstAttribute="trailing" secondItem="HNp-MT-hqh" secondAttribute="trailing" id="zbe-6F-pwl"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -112,6 +94,32 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="Hue-Ja-57B"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="EtP-WM-6AT"/>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gAa-iJ-JKd">
+                                <rect key="frame" x="0.0" y="114" width="414" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nO-VB-ACR">
+                                        <rect key="frame" x="20" y="40" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EEf-sT-xab">
+                                        <rect key="frame" x="44" y="40" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="EEf-sT-xab" firstAttribute="leading" secondItem="1nO-VB-ACR" secondAttribute="trailing" constant="24" id="8bH-tO-Yt8"/>
+                                    <constraint firstItem="EEf-sT-xab" firstAttribute="bottom" secondItem="1nO-VB-ACR" secondAttribute="bottom" id="DQ0-b2-OiV"/>
+                                    <constraint firstAttribute="height" constant="80" id="SHE-eG-v1p"/>
+                                    <constraint firstItem="1nO-VB-ACR" firstAttribute="centerY" secondItem="gAa-iJ-JKd" secondAttribute="centerY" id="UCk-wh-aq9"/>
+                                    <constraint firstItem="1nO-VB-ACR" firstAttribute="leading" secondItem="gAa-iJ-JKd" secondAttribute="leading" constant="20" id="g43-ta-Cco"/>
+                                    <constraint firstItem="EEf-sT-xab" firstAttribute="top" secondItem="1nO-VB-ACR" secondAttribute="top" id="ihC-c0-zED"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YSv-QV-Z0p">
                                 <rect key="frame" x="0.0" y="44" width="70" height="70"/>
                                 <constraints>
@@ -141,12 +149,13 @@
                     </view>
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
+                        <outlet property="inputLabel" destination="EnY-yN-OGe" id="JYM-xt-PsH"/>
                         <outlet property="inputTextField" destination="HNp-MT-hqh" id="Xp7-hr-Xea"/>
                         <outlet property="letterCategoryLabel" destination="NUt-ae-3Eb" id="OGA-m3-O1p"/>
+                        <outlet property="letterTextView" destination="uox-k0-tFx" id="vYN-vI-8WM"/>
                         <outlet property="letterTitleLabel" destination="EEf-sT-xab" id="lgV-0f-bTD"/>
                         <outlet property="letterToLabel" destination="1nO-VB-ACR" id="Q4h-QY-TTZ"/>
                         <outlet property="toAndTitleView" destination="gAa-iJ-JKd" id="VCs-ny-bxv"/>
-                        <outlet property="toLabel" destination="EnY-yN-OGe" id="JYM-xt-PsH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XNg-b8-Oq0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
