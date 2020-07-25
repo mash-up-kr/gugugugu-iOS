@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,22 +16,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Home" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dng-qP-xv6">
-                                <rect key="frame" x="184" y="433" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="letterButtonTouchUpInside:" destination="n9x-C4-Ib9" eventType="touchUpInside" id="QVn-fb-ZVP"/>
-                                </connections>
-                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fBj-AB-a4e">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kf8-lN-4gZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="584"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="58" translatesAutoresizingMaskIntoConstraints="NO" id="FEC-ES-Yml" customClass="HomeTitleView" customModule="gugugugu" customModuleProvider="target">
+                                                <rect key="frame" x="16" y="40" width="382" height="58"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            </view>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="424" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iqD-eu-KqI">
+                                                <rect key="frame" x="0.0" y="162" width="414" height="360"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="360" id="qWZ-3g-pFq"/>
+                                                </constraints>
+                                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="36M-DW-sja">
+                                                    <size key="itemSize" width="128" height="128"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Fd4-7J-T8K">
+                                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="QDI-UQ-cbj">
+                                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </collectionViewCellContentView>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
+                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Home" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dng-qP-xv6">
+                                                <rect key="frame" x="181" y="554" width="52" height="30"/>
+                                                <state key="normal" title="편지쓰기"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="iqD-eu-KqI" secondAttribute="trailing" id="5Xr-M0-NGe"/>
+                                            <constraint firstItem="iqD-eu-KqI" firstAttribute="leading" secondItem="kf8-lN-4gZ" secondAttribute="leading" id="84f-PL-EqB"/>
+                                            <constraint firstItem="dng-qP-xv6" firstAttribute="centerX" secondItem="kf8-lN-4gZ" secondAttribute="centerX" id="MIn-NA-zk6"/>
+                                            <constraint firstItem="FEC-ES-Yml" firstAttribute="top" secondItem="kf8-lN-4gZ" secondAttribute="top" constant="40" id="O7k-Pn-4by"/>
+                                            <constraint firstAttribute="trailing" secondItem="FEC-ES-Yml" secondAttribute="trailing" constant="16" id="Xa2-K6-Rg3"/>
+                                            <constraint firstItem="iqD-eu-KqI" firstAttribute="top" secondItem="FEC-ES-Yml" secondAttribute="bottom" constant="64" id="fQo-d9-CKH"/>
+                                            <constraint firstItem="dng-qP-xv6" firstAttribute="top" secondItem="iqD-eu-KqI" secondAttribute="bottom" constant="32" id="kgZ-jl-5r3"/>
+                                            <constraint firstItem="FEC-ES-Yml" firstAttribute="leading" secondItem="kf8-lN-4gZ" secondAttribute="leading" constant="16" id="mTJ-42-cQ8"/>
+                                            <constraint firstAttribute="bottom" secondItem="dng-qP-xv6" secondAttribute="bottom" id="scH-38-FLm"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="kf8-lN-4gZ" firstAttribute="bottom" secondItem="fBj-AB-a4e" secondAttribute="bottom" id="7w4-YU-2rF"/>
+                                    <constraint firstAttribute="trailing" secondItem="kf8-lN-4gZ" secondAttribute="trailing" id="pl5-nf-3eG"/>
+                                    <constraint firstItem="kf8-lN-4gZ" firstAttribute="width" secondItem="fBj-AB-a4e" secondAttribute="width" id="xrt-bs-aUQ"/>
+                                    <constraint firstItem="kf8-lN-4gZ" firstAttribute="leading" secondItem="fBj-AB-a4e" secondAttribute="leading" id="yMA-Ni-gbz"/>
+                                    <constraint firstItem="kf8-lN-4gZ" firstAttribute="top" secondItem="fBj-AB-a4e" secondAttribute="top" id="zas-JG-x3d"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fBj-AB-a4e" firstAttribute="top" secondItem="TJG-nO-VRZ" secondAttribute="top" id="7wP-nl-VM8"/>
+                            <constraint firstItem="fBj-AB-a4e" firstAttribute="leading" secondItem="TJG-nO-VRZ" secondAttribute="leading" id="JrK-ri-iVb"/>
+                            <constraint firstItem="TJG-nO-VRZ" firstAttribute="bottom" secondItem="fBj-AB-a4e" secondAttribute="bottom" id="Qxf-0j-fqF"/>
+                            <constraint firstItem="TJG-nO-VRZ" firstAttribute="trailing" secondItem="fBj-AB-a4e" secondAttribute="trailing" id="yrx-go-RiW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="TJG-nO-VRZ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="lRM-UR-Cwb"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="collectionView" destination="iqD-eu-KqI" id="gFN-yg-ynQ"/>
                         <outlet property="letterWriteButton" destination="dng-qP-xv6" id="LBw-M2-BrC"/>
+                        <outlet property="scrollView" destination="fBj-AB-a4e" id="H3Q-Wz-EsH"/>
+                        <outlet property="titleView" destination="FEC-ES-Yml" id="nOL-bD-KY2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eTn-AC-79c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
