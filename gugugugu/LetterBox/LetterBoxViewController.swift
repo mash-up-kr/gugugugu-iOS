@@ -120,11 +120,11 @@ private extension LetterBoxViewController {
         if hideLargeTitle {
             self.navigationItem.setRightBarButton(self.segmentControlBarButtonItem, animated: true)
             self.navigationItem.setLeftBarButton(self.leftAlignmentTitleBarButtonItem, animated: true)
-            self.title = nil
+            self.navigationItem.title = nil
         } else {
             self.navigationItem.setRightBarButton(nil, animated: true)
             self.navigationItem.setLeftBarButton(nil, animated: true)
-            self.title = "편지함"
+            self.navigationItem.title = "편지함"
         }
         
         UIView.animate(withDuration: 0.2) {
