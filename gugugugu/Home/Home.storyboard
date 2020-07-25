@@ -52,6 +52,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Home" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dng-qP-xv6">
                                                 <rect key="frame" x="181" y="554" width="52" height="30"/>
                                                 <state key="normal" title="편지쓰기"/>
+                                                <connections>
+                                                    <action selector="letterWriteButtonTouchUpInside:" destination="n9x-C4-Ib9" eventType="touchUpInside" id="ZnI-rp-ojI"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
