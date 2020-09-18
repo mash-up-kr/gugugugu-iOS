@@ -38,6 +38,15 @@
         }
       },
       {
+        "package": "Promises",
+        "repositoryURL": "https://github.com/google/promises.git",
+        "state": {
+          "branch": null,
+          "revision": "c5cdb6bdc2d3db8ef81e3bc71d55d31baf638837",
+          "version": "1.2.10"
+        }
+      },
+      {
         "package": "Quick",
         "repositoryURL": "https://github.com/Quick/Quick.git",
         "state": {
@@ -71,15 +80,6 @@
           "branch": null,
           "revision": "cce95dd704bc08cd3d69c087a05a6fc3118e2722",
           "version": "4.5.0"
-        }
-      },
-      {
-        "package": "SwiftCoroutine",
-        "repositoryURL": "https://github.com/belozierov/SwiftCoroutine.git",
-        "state": {
-          "branch": null,
-          "revision": "852de01bf167d33e1b6e1cc154c4dc1d559fccfa",
-          "version": "2.1.9"
         }
       }
     ]

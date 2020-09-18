@@ -18,11 +18,11 @@
 		A56A26D124CC26E2003E6553 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A56A26D024CC26E2003E6553 /* Home.storyboard */; };
 		A56A26D324CC30F2003E6553 /* LetterCoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56A26D224CC30F2003E6553 /* LetterCoverCell.swift */; };
 		A56A26D524CC7641003E6553 /* HomeTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56A26D424CC7641003E6553 /* HomeTitleView.swift */; };
+		E38986B42514F31E004B922A /* Promises in Frameworks */ = {isa = PBXBuildFile; productRef = E38986B32514F31E004B922A /* Promises */; };
 		E3BBEA8024F8BA2F00B98749 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E3BBEA7F24F8BA2F00B98749 /* Kingfisher */; };
 		E3BBEA8324F8BB1100B98749 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E3BBEA8224F8BB1100B98749 /* Alamofire */; };
 		E3BBEA8624F8BC0300B98749 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = E3BBEA8524F8BC0300B98749 /* Moya */; };
 		E3BBEA8824F8BC0300B98749 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = E3BBEA8724F8BC0300B98749 /* RxMoya */; };
-		E3BBEA8B24F8BC3D00B98749 /* SwiftCoroutine in Frameworks */ = {isa = PBXBuildFile; productRef = E3BBEA8A24F8BC3D00B98749 /* SwiftCoroutine */; };
 		E3C17A2324CCC5280083F54D /* LetterToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C17A2124CC28600083F54D /* LetterToViewController.swift */; };
 		E3C17A2424CCC55F0083F54D /* Letter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3C17A1F24CC28360083F54D /* Letter.storyboard */; };
 /* End PBXBuildFile section */
@@ -53,8 +53,8 @@
 				E3BBEA8024F8BA2F00B98749 /* Kingfisher in Frameworks */,
 				E3BBEA8324F8BB1100B98749 /* Alamofire in Frameworks */,
 				E3BBEA8824F8BC0300B98749 /* RxMoya in Frameworks */,
+				E38986B42514F31E004B922A /* Promises in Frameworks */,
 				E3BBEA8624F8BC0300B98749 /* Moya in Frameworks */,
-				E3BBEA8B24F8BC3D00B98749 /* SwiftCoroutine in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,7 +151,7 @@
 				E3BBEA8224F8BB1100B98749 /* Alamofire */,
 				E3BBEA8524F8BC0300B98749 /* Moya */,
 				E3BBEA8724F8BC0300B98749 /* RxMoya */,
-				E3BBEA8A24F8BC3D00B98749 /* SwiftCoroutine */,
+				E38986B32514F31E004B922A /* Promises */,
 			);
 			productName = gugugugu;
 			productReference = A56A26B024CC0BF0003E6553 /* gugugugu.app */;
@@ -185,7 +185,7 @@
 				E3BBEA7E24F8BA2F00B98749 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				E3BBEA8124F8BB1100B98749 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				E3BBEA8424F8BC0300B98749 /* XCRemoteSwiftPackageReference "Moya" */,
-				E3BBEA8924F8BC3D00B98749 /* XCRemoteSwiftPackageReference "SwiftCoroutine" */,
+				E38986B22514F31E004B922A /* XCRemoteSwiftPackageReference "promises" */,
 			);
 			productRefGroup = A56A26B124CC0BF0003E6553 /* Products */;
 			projectDirPath = "";
@@ -427,6 +427,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E38986B22514F31E004B922A /* XCRemoteSwiftPackageReference "promises" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/promises.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.10;
+			};
+		};
 		E3BBEA7E24F8BA2F00B98749 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -451,17 +459,14 @@
 				minimumVersion = 13.0.0;
 			};
 		};
-		E3BBEA8924F8BC3D00B98749 /* XCRemoteSwiftPackageReference "SwiftCoroutine" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/belozierov/SwiftCoroutine.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.1.9;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E38986B32514F31E004B922A /* Promises */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E38986B22514F31E004B922A /* XCRemoteSwiftPackageReference "promises" */;
+			productName = Promises;
+		};
 		E3BBEA7F24F8BA2F00B98749 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E3BBEA7E24F8BA2F00B98749 /* XCRemoteSwiftPackageReference "Kingfisher" */;
@@ -481,11 +486,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E3BBEA8424F8BC0300B98749 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = RxMoya;
-		};
-		E3BBEA8A24F8BC3D00B98749 /* SwiftCoroutine */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E3BBEA8924F8BC3D00B98749 /* XCRemoteSwiftPackageReference "SwiftCoroutine" */;
-			productName = SwiftCoroutine;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
