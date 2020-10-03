@@ -16,20 +16,19 @@
 		A56A26C224CC0BF1003E6553 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A56A26C024CC0BF1003E6553 /* LaunchScreen.storyboard */; };
 		A56A26CC24CC22A1003E6553 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56A26CB24CC22A1003E6553 /* HomeViewController.swift */; };
 		A56A26D124CC26E2003E6553 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A56A26D024CC26E2003E6553 /* Home.storyboard */; };
-		
+		A56A26D324CC30F2003E6553 /* LetterCoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56A26D224CC30F2003E6553 /* LetterCoverCell.swift */; };
+		A56A26D524CC7641003E6553 /* HomeTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56A26D424CC7641003E6553 /* HomeTitleView.swift */; };
+		D5722A1224CCA6DA0040EA63 /* LetterBox.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5722A1124CCA6DA0040EA63 /* LetterBox.storyboard */; };
+		D5722A1424CCAB540040EA63 /* LetterBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5722A1324CCAB540040EA63 /* LetterBoxViewController.swift */; };
+		D5722A1724CCABA50040EA63 /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5722A1624CCABA50040EA63 /* Letter.swift */; };
+		D5722A1924CCB3D10040EA63 /* LetterBoxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5722A1824CCB3D10040EA63 /* LetterBoxTableViewCell.swift */; };
 		E38986B42514F31E004B922A /* Promises in Frameworks */ = {isa = PBXBuildFile; productRef = E38986B32514F31E004B922A /* Promises */; };
 		E3BBEA8024F8BA2F00B98749 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E3BBEA7F24F8BA2F00B98749 /* Kingfisher */; };
 		E3BBEA8324F8BB1100B98749 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E3BBEA8224F8BB1100B98749 /* Alamofire */; };
 		E3BBEA8624F8BC0300B98749 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = E3BBEA8524F8BC0300B98749 /* Moya */; };
 		E3BBEA8824F8BC0300B98749 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = E3BBEA8724F8BC0300B98749 /* RxMoya */; };
-		E3C17A2324CCC5280083F54D /* LetterToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C17A2124CC28600083F54D /* LetterToViewController.swift */; };
+		E3C17A2324CCC5280083F54D /* LetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C17A2124CC28600083F54D /* LetterViewController.swift */; };
 		E3C17A2424CCC55F0083F54D /* Letter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3C17A1F24CC28360083F54D /* Letter.storyboard */; };
-        A56A26D324CC30F2003E6553 /* LetterCoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56A26D224CC30F2003E6553 /* LetterCoverCell.swift */; };
-        A56A26D524CC7641003E6553 /* HomeTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56A26D424CC7641003E6553 /* HomeTitleView.swift */; };
-		D5722A1224CCA6DA0040EA63 /* LetterBox.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5722A1124CCA6DA0040EA63 /* LetterBox.storyboard */; };
-		D5722A1424CCAB540040EA63 /* LetterBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5722A1324CCAB540040EA63 /* LetterBoxViewController.swift */; };
-		D5722A1724CCABA50040EA63 /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5722A1624CCABA50040EA63 /* Letter.swift */; };
-		D5722A1924CCB3D10040EA63 /* LetterBoxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5722A1824CCB3D10040EA63 /* LetterBoxTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,13 +45,12 @@
 		A56A26D024CC26E2003E6553 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		A56A26D224CC30F2003E6553 /* LetterCoverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterCoverCell.swift; sourceTree = "<group>"; };
 		A56A26D424CC7641003E6553 /* HomeTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTitleView.swift; sourceTree = "<group>"; };
-		E3C17A1F24CC28360083F54D /* Letter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Letter.storyboard; sourceTree = "<group>"; };
-		E3C17A2124CC28600083F54D /* LetterToViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterToViewController.swift; sourceTree = "<group>"; };
-		E3C17A2124CC28600083F54D /* LetterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterViewController.swift; sourceTree = "<group>"; };
 		D5722A1124CCA6DA0040EA63 /* LetterBox.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LetterBox.storyboard; sourceTree = "<group>"; };
 		D5722A1324CCAB540040EA63 /* LetterBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterBoxViewController.swift; sourceTree = "<group>"; };
 		D5722A1624CCABA50040EA63 /* Letter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letter.swift; sourceTree = "<group>"; };
 		D5722A1824CCB3D10040EA63 /* LetterBoxTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterBoxTableViewCell.swift; sourceTree = "<group>"; };
+		E3C17A1F24CC28360083F54D /* Letter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Letter.storyboard; sourceTree = "<group>"; };
+		E3C17A2124CC28600083F54D /* LetterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,15 +131,6 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		E3C17A1E24CC28280083F54D /* Letter */ = {
-			isa = PBXGroup;
-			children = (
-				E3C17A1F24CC28360083F54D /* Letter.storyboard */,
-				E3C17A2124CC28600083F54D /* LetterToViewController.swift */,
-			);
-			path = Letter;
-            sourceTree = "<group>";
-        };
 		D5722A1024CCA6CA0040EA63 /* LetterBox */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +147,15 @@
 				D5722A1624CCABA50040EA63 /* Letter.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E3C17A1E24CC28280083F54D /* Letter */ = {
+			isa = PBXGroup;
+			children = (
+				E3C17A1F24CC28360083F54D /* Letter.storyboard */,
+				E3C17A2124CC28600083F54D /* LetterViewController.swift */,
+			);
+			path = Letter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,7 +252,7 @@
 				D5722A1924CCB3D10040EA63 /* LetterBoxTableViewCell.swift in Sources */,
 				A56A26BA24CC0BF0003E6553 /* SecondViewController.swift in Sources */,
 				A56A26B824CC0BF0003E6553 /* FirstViewController.swift in Sources */,
-				E3C17A2324CCC5280083F54D /* LetterToViewController.swift in Sources */,
+				E3C17A2324CCC5280083F54D /* LetterViewController.swift in Sources */,
 				A56A26B424CC0BF0003E6553 /* AppDelegate.swift in Sources */,
 				A56A26B624CC0BF0003E6553 /* SceneDelegate.swift in Sources */,
 				A56A26D324CC30F2003E6553 /* LetterCoverCell.swift in Sources */,
@@ -411,7 +409,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gugugugu.gugugugu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "GUGUGUGU Provisioning Profile";
+				PROVISIONING_PROFILE_SPECIFIER = "gugugugu Provisioning Profile";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -431,7 +429,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gugugugu.gugugugu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "GUGUGUGU Provisioning Profile";
+				PROVISIONING_PROFILE_SPECIFIER = "gugugugu Provisioning Profile";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
