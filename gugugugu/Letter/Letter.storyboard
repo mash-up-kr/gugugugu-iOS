@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vnF-lF-qYD">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -21,27 +21,27 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bKc-RQ-ScL">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="668"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUt-ae-3Eb">
-                                                <rect key="frame" x="20" y="60" width="19.5" height="20"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이 편지를 받을 사람은?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUt-ae-3Eb">
+                                                <rect key="frame" x="20" y="60" width="171.5" height="23"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="19"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wu6-o3-mAJ">
-                                                <rect key="frame" x="20" y="120" width="3" height="60"/>
-                                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <rect key="frame" x="20" y="123" width="3" height="18"/>
+                                                <color key="backgroundColor" red="0.98431372549019602" green="0.79607843137254897" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="mKx-Sb-dzR"/>
+                                                    <constraint firstAttribute="height" constant="18" id="mKx-Sb-dzR"/>
                                                     <constraint firstAttribute="width" constant="3" id="rka-fq-aSZ"/>
                                                 </constraints>
                                             </view>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="To" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HNp-MT-hqh">
-                                                <rect key="frame" x="40" y="120" width="354" height="60"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="받는 사람" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HNp-MT-hqh">
+                                                <rect key="frame" x="40" y="123" width="354" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits" spellCheckingType="no" smartInsertDeleteType="no"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EnY-yN-OGe">
-                                                <rect key="frame" x="40" y="120" width="354" height="60"/>
+                                                <rect key="frame" x="40" y="123" width="354" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -84,12 +84,31 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zwR-IF-3NE">
+                                        <rect key="frame" x="32" y="40" width="1" height="0.0"/>
+                                        <color key="backgroundColor" red="0.49019607843137253" green="0.49019607843137253" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1" id="zfy-5a-Ap8"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRS-rd-r50">
+                                        <rect key="frame" x="45" y="40" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="zwR-IF-3NE" firstAttribute="bottom" secondItem="1nO-VB-ACR" secondAttribute="bottom" id="0QL-Gc-5Ra"/>
+                                    <constraint firstItem="zwR-IF-3NE" firstAttribute="leading" secondItem="1nO-VB-ACR" secondAttribute="trailing" constant="12" id="4Ir-xU-jKi"/>
+                                    <constraint firstItem="dRS-rd-r50" firstAttribute="top" secondItem="zwR-IF-3NE" secondAttribute="top" id="5Qx-Xf-CJa"/>
+                                    <constraint firstItem="dRS-rd-r50" firstAttribute="bottom" secondItem="zwR-IF-3NE" secondAttribute="bottom" id="Kyy-gO-Zmh"/>
                                     <constraint firstAttribute="height" constant="80" id="SHE-eG-v1p"/>
                                     <constraint firstItem="1nO-VB-ACR" firstAttribute="centerY" secondItem="gAa-iJ-JKd" secondAttribute="centerY" id="UCk-wh-aq9"/>
+                                    <constraint firstItem="zwR-IF-3NE" firstAttribute="top" secondItem="1nO-VB-ACR" secondAttribute="top" id="VA5-OW-lnl"/>
                                     <constraint firstItem="1nO-VB-ACR" firstAttribute="leading" secondItem="gAa-iJ-JKd" secondAttribute="leading" constant="20" id="g43-ta-Cco"/>
+                                    <constraint firstItem="dRS-rd-r50" firstAttribute="leading" secondItem="zwR-IF-3NE" secondAttribute="trailing" constant="12" id="qUj-pr-Rj1"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8cj-o3-hq7">
@@ -145,10 +164,13 @@
                     </view>
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
+                        <outlet property="currentPageLabel" destination="MPD-sM-ekd" id="pId-qe-6cO"/>
                         <outlet property="inputLabel" destination="EnY-yN-OGe" id="JYM-xt-PsH"/>
                         <outlet property="inputTextField" destination="HNp-MT-hqh" id="Xp7-hr-Xea"/>
                         <outlet property="letterCategoryLabel" destination="NUt-ae-3Eb" id="OGA-m3-O1p"/>
+                        <outlet property="letterFromLabel" destination="dRS-rd-r50" id="vgK-M2-LDv"/>
                         <outlet property="letterToLabel" destination="1nO-VB-ACR" id="Q4h-QY-TTZ"/>
+                        <outlet property="seperationView" destination="zwR-IF-3NE" id="Lra-g4-rkB"/>
                         <outlet property="sequenceView" destination="8cj-o3-hq7" id="WcK-gK-TS9"/>
                         <outlet property="toAndTitleView" destination="gAa-iJ-JKd" id="VCs-ny-bxv"/>
                     </connections>

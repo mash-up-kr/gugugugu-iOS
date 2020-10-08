@@ -11,42 +11,62 @@ import UIKit
 class LetterToViewController: UIViewController, UIGestureRecognizerDelegate {
     
     // MARK: - IBOutlet
-    @IBOutlet private weak var inputTextField: UITextField!
-    @IBOutlet private weak var toAndTitleView: UIView!
-    @IBOutlet private weak var letterCategoryLabel: UILabel!
-    @IBOutlet private weak var letterToLabel: UILabel!
-    @IBOutlet private weak var inputLabel: UILabel!
-    @IBOutlet private weak var sequenceView: UIView!
+    @IBOutlet private weak var inputTextField: UITextField?
+    @IBOutlet private weak var toAndTitleView: UIView?
+    @IBOutlet private weak var letterCategoryLabel: UILabel?
+    @IBOutlet private weak var letterToLabel: UILabel?
+    @IBOutlet private weak var letterFromLabel: UILabel?
+    @IBOutlet private weak var seperationView: UIView?
+    @IBOutlet private weak var inputLabel: UILabel?
+    @IBOutlet private weak var sequenceView: UIView?
+    @IBOutlet private weak var currentPageLabel: UILabel?
     
     // MARK: - IBAction
     @IBAction func backButtonTouchUpInside(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
     
+    // MARK: - Property
+    private var currentCategory: LetterCategory = .to
+    
     // MARK: - Method
     private func setUp() {
         setView()
-        inputTextField.delegate = self
+        inputTextField?.delegate = self
         addKeyboardObserver()
         addTapGesture(to: self.view)
     }
     
     private func setView() {
-        sequenceView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.28)
+        sequenceView?.backgroundColor = UIColor(red: 21, green: 21, blue: 22, alpha: 0)
     }
     
-    private func whenToTextFieldIsFilled() {
-        inputLabel.text = inputTextField.text
+    private func categoryToIsFilled() {
+        letterToLabel?.text = inputTextField?.text
+        inputLabel?.text = ""
+        inputTextField?.text = ""
         
-        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
-            self.inputLabel.frame.origin = CGPoint(x: self.letterToLabel.frame.origin.x, y: self.letterToLabel.frame.origin.y - 80)
-            self.letterToLabel.text = self.inputTextField.text
-        }, completion: { (_) in
-            self.inputLabel.frame.origin = CGPoint(x: self.inputTextField.frame.origin.x, y: self.inputTextField.frame.origin.y)
-            self.inputLabel.text = ""
-            self.view.endEditing(true)
-        })
-        inputTextField.text = ""
+        letterCategoryLabel?.text = "이 편지를 대표할 문장을 입력해주세요."
+        inputTextField?.placeholder = "이 편지는"
+        currentPageLabel?.text = "2 / 4"
+        seperationView?.isHidden = true
+        
+        view.endEditing(true)
+        currentCategory = .from
+    }
+    
+    private func categoryFromIsFilled() {
+        letterFromLabel?.text = inputTextField?.text
+        inputLabel?.text = ""
+        inputTextField?.text = ""
+        
+        letterCategoryLabel?.text = "편지를 작성해주세요."
+        inputTextField?.placeholder = "내가 전달하고 싶은 이야기"
+        currentPageLabel?.text = "3 / 4"
+        seperationView?.isHidden = false
+        
+        view.endEditing(true)
+        currentCategory = .letter
     }
     
     private func addKeyboardObserver() {
@@ -86,7 +106,18 @@ class LetterToViewController: UIViewController, UIGestureRecognizerDelegate {
 extension LetterToViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        whenToTextFieldIsFilled()
+        
+        switch currentCategory {
+        case .to:
+            categoryToIsFilled()
+        case .from:
+            categoryFromIsFilled()
+        case .letter:
+            print("Minho")
+        case .draw:
+            print("Minho")
+        }
+
         return true
     }
     
@@ -95,7 +126,12 @@ extension LetterToViewController: UITextFieldDelegate {
         guard let text = textField.text else { return true }
         let textFieldTextLength = text.count + string.count - range.length
         
-        return textFieldTextLength <= 10
+        switch currentCategory {
+        case .to, .from:
+            return textFieldTextLength <= 10
+        default:
+            return textFieldTextLength <= 100
+        }
     }
 }
 
