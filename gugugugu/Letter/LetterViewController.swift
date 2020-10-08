@@ -11,11 +11,12 @@ import UIKit
 class LetterToViewController: UIViewController, UIGestureRecognizerDelegate {
     
     // MARK: - IBOutlet
-    @IBOutlet weak var inputTextField: UITextField!
-    @IBOutlet weak var toAndTitleView: UIView!
-    @IBOutlet weak var letterCategoryLabel: UILabel!
-    @IBOutlet weak var letterToLabel: UILabel!
-    @IBOutlet weak var inputLabel: UILabel!
+    @IBOutlet private weak var inputTextField: UITextField!
+    @IBOutlet private weak var toAndTitleView: UIView!
+    @IBOutlet private weak var letterCategoryLabel: UILabel!
+    @IBOutlet private weak var letterToLabel: UILabel!
+    @IBOutlet private weak var inputLabel: UILabel!
+    @IBOutlet private weak var sequenceView: UIView!
     
     // MARK: - IBAction
     @IBAction func backButtonTouchUpInside(_ sender: UIButton) {
@@ -24,9 +25,14 @@ class LetterToViewController: UIViewController, UIGestureRecognizerDelegate {
     
     // MARK: - Method
     private func setUp() {
+        setView()
         inputTextField.delegate = self
         addKeyboardObserver()
         addTapGesture(to: self.view)
+    }
+    
+    private func setView() {
+        sequenceView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.28)
     }
     
     private func whenToTextFieldIsFilled() {
@@ -34,7 +40,6 @@ class LetterToViewController: UIViewController, UIGestureRecognizerDelegate {
         
         UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
             self.inputLabel.frame.origin = CGPoint(x: self.letterToLabel.frame.origin.x, y: self.letterToLabel.frame.origin.y - 80)
-
             self.letterToLabel.text = self.inputTextField.text
         }, completion: { (_) in
             self.inputLabel.frame.origin = CGPoint(x: self.inputTextField.frame.origin.x, y: self.inputTextField.frame.origin.y)

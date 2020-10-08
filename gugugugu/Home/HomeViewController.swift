@@ -17,6 +17,7 @@ class HomeViewController: UIViewController {
 
     @IBAction func letterWriteButtonTouchUpInside(_ sender: UIButton) {
         guard let viewController = UIStoryboard(name: "Letter", bundle: nil).instantiateViewController(withIdentifier: "Letter") as? LetterToViewController else { return }
+        viewController.modalPresentationStyle = .fullScreen
         present(viewController, animated: true, completion: nil)
     }
     
