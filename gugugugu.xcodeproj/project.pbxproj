@@ -18,6 +18,10 @@
 		A56A26D124CC26E2003E6553 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A56A26D024CC26E2003E6553 /* Home.storyboard */; };
 		A56A26D324CC30F2003E6553 /* LetterCoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56A26D224CC30F2003E6553 /* LetterCoverCell.swift */; };
 		A56A26D524CC7641003E6553 /* HomeTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56A26D424CC7641003E6553 /* HomeTitleView.swift */; };
+		A5A7FDC625303CF6007103F5 /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A7FDC525303CF6007103F5 /* KeyChain.swift */; };
+		A5A7FDCA25303EB2007103F5 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = A5A7FDC925303EB2007103F5 /* KeychainAccess */; };
+		A5A7FDCD2530491F007103F5 /* APITarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A7FDCC2530491F007103F5 /* APITarget.swift */; };
+		A5D72D6125303038008ED1B8 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D72D6025303038008ED1B8 /* API.swift */; };
 		D5722A1224CCA6DA0040EA63 /* LetterBox.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5722A1124CCA6DA0040EA63 /* LetterBox.storyboard */; };
 		D5722A1424CCAB540040EA63 /* LetterBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5722A1324CCAB540040EA63 /* LetterBoxViewController.swift */; };
 		D5722A1724CCABA50040EA63 /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5722A1624CCABA50040EA63 /* Letter.swift */; };
@@ -48,6 +52,9 @@
 		A56A26D024CC26E2003E6553 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		A56A26D224CC30F2003E6553 /* LetterCoverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterCoverCell.swift; sourceTree = "<group>"; };
 		A56A26D424CC7641003E6553 /* HomeTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTitleView.swift; sourceTree = "<group>"; };
+		A5A7FDC525303CF6007103F5 /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
+		A5A7FDCC2530491F007103F5 /* APITarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITarget.swift; sourceTree = "<group>"; };
+		A5D72D6025303038008ED1B8 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		D5722A1124CCA6DA0040EA63 /* LetterBox.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LetterBox.storyboard; sourceTree = "<group>"; };
 		D5722A1324CCAB540040EA63 /* LetterBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterBoxViewController.swift; sourceTree = "<group>"; };
 		D5722A1624CCABA50040EA63 /* Letter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letter.swift; sourceTree = "<group>"; };
@@ -66,6 +73,7 @@
 			files = (
 				E3BBEA8024F8BA2F00B98749 /* Kingfisher in Frameworks */,
 				E3BBEA8324F8BB1100B98749 /* Alamofire in Frameworks */,
+				A5A7FDCA25303EB2007103F5 /* KeychainAccess in Frameworks */,
 				E3BBEA8824F8BC0300B98749 /* RxMoya in Frameworks */,
 				E38986B42514F31E004B922A /* Promises in Frameworks */,
 				E3BBEA8624F8BC0300B98749 /* Moya in Frameworks */,
@@ -100,6 +108,7 @@
 				A56A26CA24CC1AFA003E6553 /* Global */,
 				A56A26B724CC0BF0003E6553 /* FirstViewController.swift */,
 				A56A26B924CC0BF0003E6553 /* SecondViewController.swift */,
+				A5D72D632530303E008ED1B8 /* API */,
 				A56A26CF24CC232D003E6553 /* Home */,
 				E3C17A1E24CC28280083F54D /* Letter */,
 				A56A26BB24CC0BF0003E6553 /* Main.storyboard */,
@@ -136,6 +145,16 @@
 				A56A26D024CC26E2003E6553 /* Home.storyboard */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		A5D72D632530303E008ED1B8 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A5A7FDCC2530491F007103F5 /* APITarget.swift */,
+				A5D72D6025303038008ED1B8 /* API.swift */,
+				A5A7FDC525303CF6007103F5 /* KeyChain.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		D5722A1024CCA6CA0040EA63 /* LetterBox */ = {
@@ -197,6 +216,7 @@
 				E3BBEA8524F8BC0300B98749 /* Moya */,
 				E3BBEA8724F8BC0300B98749 /* RxMoya */,
 				E38986B32514F31E004B922A /* Promises */,
+				A5A7FDC925303EB2007103F5 /* KeychainAccess */,
 			);
 			productName = gugugugu;
 			productReference = A56A26B024CC0BF0003E6553 /* gugugugu.app */;
@@ -231,6 +251,7 @@
 				E3BBEA8124F8BB1100B98749 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				E3BBEA8424F8BC0300B98749 /* XCRemoteSwiftPackageReference "Moya" */,
 				E38986B22514F31E004B922A /* XCRemoteSwiftPackageReference "promises" */,
+				A5A7FDC825303EB2007103F5 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			productRefGroup = A56A26B124CC0BF0003E6553 /* Products */;
 			projectDirPath = "";
@@ -274,8 +295,11 @@
 				E3C17A2324CCC5280083F54D /* LetterViewController.swift in Sources */,
 				A56A26B424CC0BF0003E6553 /* AppDelegate.swift in Sources */,
 				A56A26B624CC0BF0003E6553 /* SceneDelegate.swift in Sources */,
+				A5D72D6125303038008ED1B8 /* API.swift in Sources */,
+				A5A7FDCD2530491F007103F5 /* APITarget.swift in Sources */,
 				D5E0E550253030EA00CD8770 /* BaseNavigationView.swift in Sources */,
 				A56A26D324CC30F2003E6553 /* LetterCoverCell.swift in Sources */,
+				A5A7FDC625303CF6007103F5 /* KeyChain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +503,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A5A7FDC825303EB2007103F5 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.1;
+			};
+		};
 		E38986B22514F31E004B922A /* XCRemoteSwiftPackageReference "promises" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/google/promises.git";
@@ -500,7 +532,7 @@
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 4.8.2;
+				minimumVersion = 5.2.0;
 			};
 		};
 		E3BBEA8424F8BC0300B98749 /* XCRemoteSwiftPackageReference "Moya" */ = {
@@ -508,12 +540,17 @@
 			repositoryURL = "https://github.com/Moya/Moya.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 13.0.0;
+				minimumVersion = 14.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A5A7FDC925303EB2007103F5 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A5A7FDC825303EB2007103F5 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
 		E38986B32514F31E004B922A /* Promises */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E38986B22514F31E004B922A /* XCRemoteSwiftPackageReference "promises" */;
