@@ -44,9 +44,6 @@ class BaseNavigationView: UIView {
     private let leftBarButton = UIButton(type: .system)
     private let titleLabel = UILabel()
     private let rightBarButtons = UIStackView()
-    private lazy var bottomConstraint = {
-        bottomAnchor.constraint(equalTo: self.leftBarButton.bottomAnchor)
-    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
