@@ -11,6 +11,11 @@ import UIKit
 class LetterBoxTableViewCell: UITableViewCell {
     
     @IBOutlet private weak var containerView: UIView!
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.containerView.backgroundColor = nil
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
