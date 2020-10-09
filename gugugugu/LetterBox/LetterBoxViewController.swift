@@ -24,32 +24,26 @@ final class LetterBoxViewController: UIViewController {
                 background: nil)
             self.letters.append(letter)
         }
-        if let navigationBarHeight = self.navigationController?.navigationBar.frame.height {
-            self.navigationBarHeight = navigationBarHeight
-        }
+        
+        setupSegmentControl()
     
     }
-    // FIXME: 디자인 나오면 Custom Segment Control 만들기
-    @IBOutlet private weak var filterSegmentControl: UISegmentedControl!
+    
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var headerView: UIView!
+    
+    @IBOutlet weak var onlineHeight: NSLayoutConstraint!
     
     private var navigationBarHeight: CGFloat = .zero
     private var letters: [Letter] = []
     
-    private lazy var segmentControl: UISegmentedControl = {
-        let segmentControl = UISegmentedControl(items: ["전체", "보낸 편지", "받은 편지"])
+    private lazy var segmentControl: TransparentSegmentControl = {
+        let segmentControl = TransparentSegmentControl(items: ["전체", "보낸 편지", "받은 편지"])
         segmentControl.selectedSegmentIndex = 0
-        segmentControl.addTarget(self, action: #selector(self.didChangeSegmentedControl(_:)), for: .valueChanged)
+        segmentControl.delegate = self
         return segmentControl
     }()
-    private lazy var segmentControlBarButtonItem: UIBarButtonItem = {
-        return UIBarButtonItem(customView: self.segmentControl)
-    }()
-    private lazy var leftAlignmentTitleBarButtonItem: UIBarButtonItem = {
-        let label = UILabel()
-        label.text = self.navigationItem.title
-        return UIBarButtonItem(customView: label)
-    }()
+
 }
 
 extension LetterBoxViewController: UITableViewDataSource {
@@ -84,6 +78,19 @@ extension LetterBoxViewController: UITableViewDelegate {
         return .delete
     }
     
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: nil) { [weak self] (action, view, completionn) in
+            self?.letters.remove(at: indexPath.row)
+            tableView.beginUpdates()
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            tableView.endUpdates()
+            completionn(true)
+        }
+        deleteAction.image = UIImage(systemName: "trash.fill")
+        deleteAction.backgroundColor = UIColor(named: "darkGrey")
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         switch editingStyle {
         case .delete:
@@ -97,43 +104,64 @@ extension LetterBoxViewController: UITableViewDelegate {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if let currentNavigationBarHeight = self.navigationController?.navigationBar.frame.height,
-            currentNavigationBarHeight != self.navigationBarHeight {
-            self.updateNavigationItems(hideLargeTitle: currentNavigationBarHeight < self.navigationBarHeight)
+        
+        if scrollView.contentOffset.y > 0, self.headerView.frame.height > 90 {
+            self.onlineHeight.constant -= scrollView.contentOffset.y
+            self.onlineHeight.constant = max(90, self.onlineHeight.constant)
+            let contentOffset = CGPoint(x: scrollView.contentOffset.x, y: 0)
+            scrollView.setContentOffset(contentOffset, animated: false)
+            self.view.layoutIfNeeded()
+        } else if scrollView.contentOffset.y < 0, self.headerView.frame.height < 147 {
+            self.onlineHeight.constant -= scrollView.contentOffset.y
+            self.onlineHeight.constant = min(147, self.onlineHeight.constant)
+            let contentOffset = CGPoint(x: scrollView.contentOffset.x, y: 0)
+            scrollView.setContentOffset(contentOffset, animated: false)
+            self.view.layoutIfNeeded()
         }
     }
     
 }
 
+extension LetterBoxViewController: TransparentSegmentControlDelegate {
+
+    func didSelectedControlChange(index: Int) {
+        
+    }
+    
+    
+}
+
 
 private extension LetterBoxViewController {
-    
-    @IBAction func didChangeSegmentedControl(_ sender: UISegmentedControl) {
-        // TODO:- 컨트롤 변경시 데이터 변경
-        print("[caution] didChangeSegmentedControl \(sender.selectedSegmentIndex) ")
-        [self.filterSegmentControl, self.segmentControl]
-            .filter { $0 !== sender && $0?.selectedSegmentIndex != sender.selectedSegmentIndex }
-            .forEach {
-                $0?.selectedSegmentIndex = sender.selectedSegmentIndex
-        }
-    }
+
     
     func updateNavigationItems(hideLargeTitle: Bool) {
         // FIXME:- 누가 좀 더 깔쌈하게 바꿔줘봐바
-        if hideLargeTitle {
-            self.navigationItem.setRightBarButton(self.segmentControlBarButtonItem, animated: true)
-            self.navigationItem.setLeftBarButton(self.leftAlignmentTitleBarButtonItem, animated: true)
-            self.navigationItem.title = nil
-        } else {
-            self.navigationItem.setRightBarButton(nil, animated: true)
-            self.navigationItem.setLeftBarButton(nil, animated: true)
-            self.navigationItem.title = "편지함"
-        }
-        
-        UIView.animate(withDuration: 0.2) {
-            self.filterSegmentControl.alpha = hideLargeTitle ? 0 : 1
-        }
+//        if hideLargeTitle {
+//            self.navigationItem.setRightBarButton(self.segmentControlBarButtonItem, animated: true)
+//            self.navigationItem.setLeftBarButton(self.leftAlignmentTitleBarButtonItem, animated: true)
+//            self.navigationItem.title = nil
+//        } else {
+//            self.navigationItem.setRightBarButton(nil, animated: true)
+//            self.navigationItem.setLeftBarButton(nil, animated: true)
+//            self.navigationItem.title = "편지함"
+//        }
+//
+//        UIView.animate(withDuration: 0.2) {
+//            self.filterSegmentControl.alpha = hideLargeTitle ? 0 : 1
+//        }
     
+    }
+    
+    func setupSegmentControl() {
+        segmentControl.translatesAutoresizingMaskIntoConstraints = false
+        headerView.addSubview(segmentControl)
+        
+        NSLayoutConstraint.activate([
+            segmentControl.leadingAnchor.constraint(equalTo: headerView.leadingAnchor, constant: 22.0),
+            segmentControl.bottomAnchor.constraint(equalTo: headerView.bottomAnchor, constant: -21.0),
+            
+        ])
     }
     
 }
