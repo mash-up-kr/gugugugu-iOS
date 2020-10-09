@@ -40,6 +40,16 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits" spellCheckingType="no" smartInsertDeleteType="no"/>
                                             </textField>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="I64-Pc-aWq">
+                                                <rect key="frame" x="40" y="123" width="354" height="100"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="u2Y-8b-vla"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EnY-yN-OGe">
                                                 <rect key="frame" x="40" y="123" width="354" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -51,12 +61,15 @@
                                         <constraints>
                                             <constraint firstItem="HNp-MT-hqh" firstAttribute="leading" secondItem="Wu6-o3-mAJ" secondAttribute="trailing" constant="17" id="1xh-Wk-pfy"/>
                                             <constraint firstItem="HNp-MT-hqh" firstAttribute="bottom" secondItem="Wu6-o3-mAJ" secondAttribute="bottom" id="2Sv-On-UaF"/>
+                                            <constraint firstItem="I64-Pc-aWq" firstAttribute="leading" secondItem="HNp-MT-hqh" secondAttribute="leading" id="9Fg-Fp-W5c"/>
                                             <constraint firstItem="NUt-ae-3Eb" firstAttribute="leading" secondItem="bKc-RQ-ScL" secondAttribute="leading" constant="20" id="D96-aQ-UQ9"/>
                                             <constraint firstItem="EnY-yN-OGe" firstAttribute="bottom" secondItem="HNp-MT-hqh" secondAttribute="bottom" id="DXd-Hb-dgm"/>
                                             <constraint firstItem="EnY-yN-OGe" firstAttribute="leading" secondItem="HNp-MT-hqh" secondAttribute="leading" id="Op0-mN-oSE"/>
                                             <constraint firstItem="NUt-ae-3Eb" firstAttribute="top" secondItem="bKc-RQ-ScL" secondAttribute="top" constant="60" id="P24-AO-ijZ"/>
                                             <constraint firstItem="EnY-yN-OGe" firstAttribute="top" secondItem="HNp-MT-hqh" secondAttribute="top" id="R4G-bb-8Re"/>
+                                            <constraint firstItem="I64-Pc-aWq" firstAttribute="top" secondItem="HNp-MT-hqh" secondAttribute="top" id="REe-FM-FFO"/>
                                             <constraint firstItem="Wu6-o3-mAJ" firstAttribute="top" secondItem="NUt-ae-3Eb" secondAttribute="bottom" constant="40" id="VHu-S0-N7Y"/>
+                                            <constraint firstItem="I64-Pc-aWq" firstAttribute="trailing" secondItem="HNp-MT-hqh" secondAttribute="trailing" id="VhX-AZ-W8o"/>
                                             <constraint firstAttribute="trailing" secondItem="HNp-MT-hqh" secondAttribute="trailing" constant="20" id="bNh-Nw-umm"/>
                                             <constraint firstItem="Wu6-o3-mAJ" firstAttribute="leading" secondItem="NUt-ae-3Eb" secondAttribute="leading" id="dn4-cv-S5Y"/>
                                             <constraint firstItem="EnY-yN-OGe" firstAttribute="trailing" secondItem="HNp-MT-hqh" secondAttribute="trailing" id="ebS-kD-VF5"/>
@@ -167,6 +180,7 @@
                         <outlet property="currentPageLabel" destination="MPD-sM-ekd" id="pId-qe-6cO"/>
                         <outlet property="inputLabel" destination="EnY-yN-OGe" id="JYM-xt-PsH"/>
                         <outlet property="inputTextField" destination="HNp-MT-hqh" id="Xp7-hr-Xea"/>
+                        <outlet property="inputTextView" destination="I64-Pc-aWq" id="m97-fj-qO8"/>
                         <outlet property="letterCategoryLabel" destination="NUt-ae-3Eb" id="OGA-m3-O1p"/>
                         <outlet property="letterFromLabel" destination="dRS-rd-r50" id="vgK-M2-LDv"/>
                         <outlet property="letterToLabel" destination="1nO-VB-ACR" id="Q4h-QY-TTZ"/>
