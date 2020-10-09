@@ -10,7 +10,7 @@ import UIKit
 
 class LetterBoxTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var containerView: UIView!
+    @IBOutlet private weak var containerView: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
