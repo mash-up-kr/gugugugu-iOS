@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NtC-7h-GwL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NtC-7h-GwL">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,7 +19,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mMx-Wn-QMC">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="TXY-mw-hb9">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -34,7 +36,7 @@
                                             </connections>
                                         </segmentedControl>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="rjm-QY-3wK" secondAttribute="bottom" constant="10" id="UPq-nS-boJ"/>
                                         <constraint firstItem="rjm-QY-3wK" firstAttribute="top" secondItem="TXY-mw-hb9" secondAttribute="top" constant="10" id="VQU-Er-0wZ"/>
@@ -51,21 +53,22 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4Y-I1-Cbr">
                                                     <rect key="frame" x="16" y="0.0" width="382" height="119.5"/>
-                                                    <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JUL 25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDb-ia-KD7">
                                                     <rect key="frame" x="26" y="20" width="39.5" height="14.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="다람쥐에게  받은 편지" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxE-eN-TjK">
                                                     <rect key="frame" x="26" y="56.5" width="364" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="yDb-ia-KD7" firstAttribute="top" secondItem="BVy-ff-yeQ" secondAttribute="top" constant="20" id="11R-4C-02b"/>
                                                 <constraint firstAttribute="bottom" secondItem="H4Y-I1-Cbr" secondAttribute="bottom" constant="10" id="8i8-Yy-z1v"/>
@@ -79,6 +82,10 @@
                                                 <constraint firstItem="wxE-eN-TjK" firstAttribute="leading" secondItem="yDb-ia-KD7" secondAttribute="leading" id="vje-dk-tdp"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="containerView" destination="H4Y-I1-Cbr" id="c2S-7h-6de"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -87,14 +94,14 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="tuU-fB-1cr"/>
+                        <color key="backgroundColor" name="darkGrey"/>
                         <constraints>
                             <constraint firstItem="tuU-fB-1cr" firstAttribute="trailing" secondItem="mMx-Wn-QMC" secondAttribute="trailing" id="6VM-u6-iN8"/>
                             <constraint firstItem="mMx-Wn-QMC" firstAttribute="top" secondItem="tuU-fB-1cr" secondAttribute="top" id="OmL-BV-qzs"/>
                             <constraint firstItem="tuU-fB-1cr" firstAttribute="bottom" secondItem="mMx-Wn-QMC" secondAttribute="bottom" id="T9O-aw-KIB"/>
                             <constraint firstItem="mMx-Wn-QMC" firstAttribute="leading" secondItem="tuU-fB-1cr" secondAttribute="leading" id="XR4-BL-P0d"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="tuU-fB-1cr"/>
                     </view>
                     <navigationItem key="navigationItem" title="편지함" largeTitleDisplayMode="always" id="Ffh-4K-UBN"/>
                     <connections>
@@ -125,4 +132,9 @@
             <point key="canvasLocation" x="0.0" y="1.3392857142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="darkGrey">
+            <color red="0.12156862745098039" green="0.12156862745098039" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
