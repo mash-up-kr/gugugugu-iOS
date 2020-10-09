@@ -479,6 +479,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A5A7FDC825303EB2007103F5 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.1;
+			};
+		};
 		E38986B22514F31E004B922A /* XCRemoteSwiftPackageReference "promises" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/google/promises.git";
@@ -514,6 +522,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A5A7FDC925303EB2007103F5 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A5A7FDC825303EB2007103F5 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
 		E38986B32514F31E004B922A /* Promises */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E38986B22514F31E004B922A /* XCRemoteSwiftPackageReference "promises" */;
