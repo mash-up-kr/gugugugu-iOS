@@ -9,6 +9,8 @@
 import UIKit
 
 class LetterBoxTableViewCell: UITableViewCell {
+    
+    @IBOutlet private weak var containerView: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,6 +21,10 @@ class LetterBoxTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setContainerView(backgroundColor: UIColor?) {
+        self.containerView.backgroundColor = backgroundColor
     }
 
 }

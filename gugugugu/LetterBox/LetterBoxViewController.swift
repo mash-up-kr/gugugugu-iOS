@@ -68,6 +68,9 @@ extension LetterBoxViewController: UITableViewDataSource {
             
         }
         // TODO:- 실제 데이터 바인딩 필요~
+        let themes = LetterTheme.themes
+        let theme = themes[indexPath.item % themes.count]
+        tableViewCell.setContainerView(backgroundColor: theme.color)
         return tableViewCell
     }
     

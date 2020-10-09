@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="n9x-C4-Ib9">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="n9x-C4-Ib9">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,24 +16,24 @@
             <objects>
                 <viewController id="n9x-C4-Ib9" customClass="HomeViewController" customModule="gugugugu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Puw-q5-dEa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fBj-AB-a4e">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kf8-lN-4gZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="584"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="58" translatesAutoresizingMaskIntoConstraints="NO" id="FEC-ES-Yml" customClass="HomeTitleView" customModule="gugugugu" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="40" width="382" height="58"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <rect key="frame" x="16" y="35" width="343" height="58"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="424" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iqD-eu-KqI">
-                                                <rect key="frame" x="0.0" y="162" width="414" height="360"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="424" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iqD-eu-KqI">
+                                                <rect key="frame" x="0.0" y="179" width="375" height="344"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="360" id="qWZ-3g-pFq"/>
+                                                    <constraint firstAttribute="height" constant="344" id="qWZ-3g-pFq"/>
                                                 </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="36M-DW-sja">
                                                     <size key="itemSize" width="128" height="128"/>
@@ -49,25 +52,38 @@
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
-                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Home" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dng-qP-xv6">
-                                                <rect key="frame" x="181" y="554" width="52" height="30"/>
-                                                <state key="normal" title="편지쓰기"/>
+                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Home" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dng-qP-xv6">
+                                                <rect key="frame" x="20" y="573" width="285" height="68"/>
+                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="68" id="z4O-vG-JhZ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="15"/>
+                                                <state key="normal" title="편지쓰기">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="letterWriteButtonTouchUpInside:" destination="n9x-C4-Ib9" eventType="touchUpInside" id="ZnI-rp-ojI"/>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="iqD-eu-KqI" secondAttribute="trailing" id="5Xr-M0-NGe"/>
                                             <constraint firstItem="iqD-eu-KqI" firstAttribute="leading" secondItem="kf8-lN-4gZ" secondAttribute="leading" id="84f-PL-EqB"/>
-                                            <constraint firstItem="dng-qP-xv6" firstAttribute="centerX" secondItem="kf8-lN-4gZ" secondAttribute="centerX" id="MIn-NA-zk6"/>
-                                            <constraint firstItem="FEC-ES-Yml" firstAttribute="top" secondItem="kf8-lN-4gZ" secondAttribute="top" constant="40" id="O7k-Pn-4by"/>
+                                            <constraint firstItem="dng-qP-xv6" firstAttribute="leading" secondItem="kf8-lN-4gZ" secondAttribute="leading" constant="20" id="L9f-qx-6HI"/>
+                                            <constraint firstItem="FEC-ES-Yml" firstAttribute="top" secondItem="kf8-lN-4gZ" secondAttribute="top" constant="35" id="O7k-Pn-4by"/>
                                             <constraint firstAttribute="trailing" secondItem="FEC-ES-Yml" secondAttribute="trailing" constant="16" id="Xa2-K6-Rg3"/>
-                                            <constraint firstItem="iqD-eu-KqI" firstAttribute="top" secondItem="FEC-ES-Yml" secondAttribute="bottom" constant="64" id="fQo-d9-CKH"/>
-                                            <constraint firstItem="dng-qP-xv6" firstAttribute="top" secondItem="iqD-eu-KqI" secondAttribute="bottom" constant="32" id="kgZ-jl-5r3"/>
+                                            <constraint firstItem="iqD-eu-KqI" firstAttribute="top" secondItem="FEC-ES-Yml" secondAttribute="bottom" constant="86" id="fQo-d9-CKH"/>
+                                            <constraint firstItem="dng-qP-xv6" firstAttribute="top" secondItem="iqD-eu-KqI" secondAttribute="bottom" constant="50" id="kgZ-jl-5r3"/>
                                             <constraint firstItem="FEC-ES-Yml" firstAttribute="leading" secondItem="kf8-lN-4gZ" secondAttribute="leading" constant="16" id="mTJ-42-cQ8"/>
                                             <constraint firstAttribute="bottom" secondItem="dng-qP-xv6" secondAttribute="bottom" id="scH-38-FLm"/>
+                                            <constraint firstAttribute="trailing" secondItem="dng-qP-xv6" secondAttribute="trailing" constant="70" id="yrA-md-tTq"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -80,14 +96,14 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="TJG-nO-VRZ"/>
+                        <color key="backgroundColor" name="darkGrey"/>
                         <constraints>
                             <constraint firstItem="fBj-AB-a4e" firstAttribute="top" secondItem="TJG-nO-VRZ" secondAttribute="top" id="7wP-nl-VM8"/>
                             <constraint firstItem="fBj-AB-a4e" firstAttribute="leading" secondItem="TJG-nO-VRZ" secondAttribute="leading" id="JrK-ri-iVb"/>
                             <constraint firstItem="TJG-nO-VRZ" firstAttribute="bottom" secondItem="fBj-AB-a4e" secondAttribute="bottom" id="Qxf-0j-fqF"/>
                             <constraint firstItem="TJG-nO-VRZ" firstAttribute="trailing" secondItem="fBj-AB-a4e" secondAttribute="trailing" id="yrx-go-RiW"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="TJG-nO-VRZ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="lRM-UR-Cwb"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -103,4 +119,15 @@
             <point key="canvasLocation" x="-400" y="229"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="darkGrey">
+            <color red="0.12156862745098039" green="0.12156862745098039" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
