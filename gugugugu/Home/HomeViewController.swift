@@ -46,7 +46,8 @@ class HomeViewController: UIViewController {
         let compositionalLayout = UICollectionViewCompositionalLayout(section: coverSectionLayout)
         collectionView.setCollectionViewLayout(compositionalLayout, animated: false)
         collectionView.register(LetterCoverCell.self, forCellWithReuseIdentifier: "LetterCoverCell")
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .clear
+        
         collectionView.dataSource = self
     }
 }
@@ -58,7 +59,9 @@ extension HomeViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LetterCoverCell",
                                                       for: indexPath) as! LetterCoverCell
         cell.configure(date: Date(), andFromUser: letters[indexPath.item])
-        cell.backgroundColor = .gray
+        let themes = LetterTheme.themes
+        let theme = themes[indexPath.item % themes.count]
+        cell.backgroundView = theme.imageView
         return cell
     }
     

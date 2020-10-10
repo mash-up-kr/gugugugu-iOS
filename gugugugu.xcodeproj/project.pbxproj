@@ -22,6 +22,8 @@
 		A5A7FDCA25303EB2007103F5 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = A5A7FDC925303EB2007103F5 /* KeychainAccess */; };
 		A5A7FDCD2530491F007103F5 /* APITarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A7FDCC2530491F007103F5 /* APITarget.swift */; };
 		A5D72D6125303038008ED1B8 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D72D6025303038008ED1B8 /* API.swift */; };
+		D56A40022530AD3C00AF7035 /* TransparentSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56A40012530AD3C00AF7035 /* TransparentSegmentControl.swift */; };
+		D56A40062530C9FF00AF7035 /* LetterBoxHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56A40052530C9FF00AF7035 /* LetterBoxHeaderView.swift */; };
 		D5722A1224CCA6DA0040EA63 /* LetterBox.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5722A1124CCA6DA0040EA63 /* LetterBox.storyboard */; };
 		D5722A1424CCAB540040EA63 /* LetterBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5722A1324CCAB540040EA63 /* LetterBoxViewController.swift */; };
 		D5722A1724CCABA50040EA63 /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5722A1624CCABA50040EA63 /* Letter.swift */; };
@@ -29,6 +31,7 @@
 		D5E0E550253030EA00CD8770 /* BaseNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E0E54F253030EA00CD8770 /* BaseNavigationView.swift */; };
 		D5E1BD962530455800E2CC70 /* MinimumButtonSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E1BD952530455800E2CC70 /* MinimumButtonSize.swift */; };
 		D5E1BD9A25304B7F00E2CC70 /* LeftBarButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E1BD9925304B7F00E2CC70 /* LeftBarButtonType.swift */; };
+		D5E1BD9F2530520D00E2CC70 /* LetterTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E1BD9E2530520D00E2CC70 /* LetterTheme.swift */; };
 		E38986B42514F31E004B922A /* Promises in Frameworks */ = {isa = PBXBuildFile; productRef = E38986B32514F31E004B922A /* Promises */; };
 		E3BBEA8024F8BA2F00B98749 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E3BBEA7F24F8BA2F00B98749 /* Kingfisher */; };
 		E3BBEA8324F8BB1100B98749 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E3BBEA8224F8BB1100B98749 /* Alamofire */; };
@@ -55,6 +58,8 @@
 		A5A7FDC525303CF6007103F5 /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
 		A5A7FDCC2530491F007103F5 /* APITarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITarget.swift; sourceTree = "<group>"; };
 		A5D72D6025303038008ED1B8 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		D56A40012530AD3C00AF7035 /* TransparentSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentSegmentControl.swift; sourceTree = "<group>"; };
+		D56A40052530C9FF00AF7035 /* LetterBoxHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterBoxHeaderView.swift; sourceTree = "<group>"; };
 		D5722A1124CCA6DA0040EA63 /* LetterBox.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LetterBox.storyboard; sourceTree = "<group>"; };
 		D5722A1324CCAB540040EA63 /* LetterBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterBoxViewController.swift; sourceTree = "<group>"; };
 		D5722A1624CCABA50040EA63 /* Letter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letter.swift; sourceTree = "<group>"; };
@@ -62,6 +67,7 @@
 		D5E0E54F253030EA00CD8770 /* BaseNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationView.swift; sourceTree = "<group>"; };
 		D5E1BD952530455800E2CC70 /* MinimumButtonSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimumButtonSize.swift; sourceTree = "<group>"; };
 		D5E1BD9925304B7F00E2CC70 /* LeftBarButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftBarButtonType.swift; sourceTree = "<group>"; };
+		D5E1BD9E2530520D00E2CC70 /* LetterTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterTheme.swift; sourceTree = "<group>"; };
 		E3C17A1F24CC28360083F54D /* Letter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Letter.storyboard; sourceTree = "<group>"; };
 		E3C17A2124CC28600083F54D /* LetterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +108,7 @@
 		A56A26B224CC0BF0003E6553 /* gugugugu */ = {
 			isa = PBXGroup;
 			children = (
+				D5E1BD9D253051CE00E2CC70 /* Theme */,
 				D5E0E54E253030D900CD8770 /* Common */,
 				D5722A1524CCAB9B0040EA63 /* Model */,
 				D5722A1024CCA6CA0040EA63 /* LetterBox */,
@@ -163,6 +170,8 @@
 				D5722A1124CCA6DA0040EA63 /* LetterBox.storyboard */,
 				D5722A1324CCAB540040EA63 /* LetterBoxViewController.swift */,
 				D5722A1824CCB3D10040EA63 /* LetterBoxTableViewCell.swift */,
+				D56A40012530AD3C00AF7035 /* TransparentSegmentControl.swift */,
+				D56A40052530C9FF00AF7035 /* LetterBoxHeaderView.swift */,
 			);
 			path = LetterBox;
 			sourceTree = "<group>";
@@ -183,6 +192,14 @@
 				D5E1BD952530455800E2CC70 /* MinimumButtonSize.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		D5E1BD9D253051CE00E2CC70 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				D5E1BD9E2530520D00E2CC70 /* LetterTheme.swift */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 		E3C17A1E24CC28280083F54D /* Letter */ = {
@@ -287,6 +304,8 @@
 				D5722A1724CCABA50040EA63 /* Letter.swift in Sources */,
 				D5722A1424CCAB540040EA63 /* LetterBoxViewController.swift in Sources */,
 				D5E1BD962530455800E2CC70 /* MinimumButtonSize.swift in Sources */,
+				D56A40022530AD3C00AF7035 /* TransparentSegmentControl.swift in Sources */,
+				D56A40062530C9FF00AF7035 /* LetterBoxHeaderView.swift in Sources */,
 				A56A26CC24CC22A1003E6553 /* HomeViewController.swift in Sources */,
 				A56A26D524CC7641003E6553 /* HomeTitleView.swift in Sources */,
 				D5722A1924CCB3D10040EA63 /* LetterBoxTableViewCell.swift in Sources */,
@@ -297,6 +316,7 @@
 				A56A26B624CC0BF0003E6553 /* SceneDelegate.swift in Sources */,
 				A5D72D6125303038008ED1B8 /* API.swift in Sources */,
 				A5A7FDCD2530491F007103F5 /* APITarget.swift in Sources */,
+				D5E1BD9F2530520D00E2CC70 /* LetterTheme.swift in Sources */,
 				D5E0E550253030EA00CD8770 /* BaseNavigationView.swift in Sources */,
 				A56A26D324CC30F2003E6553 /* LetterCoverCell.swift in Sources */,
 				A5A7FDC625303CF6007103F5 /* KeyChain.swift in Sources */,
