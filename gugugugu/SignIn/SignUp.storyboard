@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4hR-88-sEO">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign Up View Controller-->
+        <scene sceneID="twP-1p-aTk">
+            <objects>
+                <viewController id="4hR-88-sEO" customClass="SignUpViewController" customModule="gugugugu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wHs-gY-TGx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="54" translatesAutoresizingMaskIntoConstraints="NO" id="cmg-vC-W94" customClass="BaseNavigationView" customModule="gugugugu" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="54"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pWb-JB-jaS">
+                                <rect key="frame" x="20" y="162" width="374" height="38.5"/>
+                                <string key="text">다른 사람에게 보여질
+닉네임을 설정해주세요</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9dL-bZ-hnx">
+                                <rect key="frame" x="36" y="236.5" width="342" height="18.5"/>
+                                <color key="textColor" red="0.31764705882352939" green="0.31764705882352939" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tQ-ag-1Tt">
+                                <rect key="frame" x="0.0" y="794" width="414" height="68"/>
+                                <color key="backgroundColor" red="0.17254901960784313" green="0.50196078431372548" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="nT5-gG-d65"/>
+                                </constraints>
+                                <state key="normal" title="시작하기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionSignUpButton:" destination="4hR-88-sEO" eventType="touchUpInside" id="34W-k4-UiE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KXa-6k-ISa"/>
+                        <color key="backgroundColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="cmg-vC-W94" firstAttribute="top" secondItem="KXa-6k-ISa" secondAttribute="top" id="95d-5M-ElN"/>
+                            <constraint firstItem="cmg-vC-W94" firstAttribute="leading" secondItem="KXa-6k-ISa" secondAttribute="leading" id="Fm7-2I-9Ox"/>
+                            <constraint firstItem="pWb-JB-jaS" firstAttribute="leading" secondItem="KXa-6k-ISa" secondAttribute="leading" constant="20" id="GjJ-Dh-oXG"/>
+                            <constraint firstItem="KXa-6k-ISa" firstAttribute="trailing" secondItem="9dL-bZ-hnx" secondAttribute="trailing" constant="36" id="WSe-9k-Skg"/>
+                            <constraint firstItem="pWb-JB-jaS" firstAttribute="top" secondItem="cmg-vC-W94" secondAttribute="bottom" constant="64" id="YQx-jN-o7w"/>
+                            <constraint firstItem="9dL-bZ-hnx" firstAttribute="leading" secondItem="KXa-6k-ISa" secondAttribute="leading" constant="36" id="gKF-Oc-pLI"/>
+                            <constraint firstItem="9tQ-ag-1Tt" firstAttribute="leading" secondItem="KXa-6k-ISa" secondAttribute="leading" id="hzv-ez-Q4y"/>
+                            <constraint firstItem="KXa-6k-ISa" firstAttribute="trailing" secondItem="cmg-vC-W94" secondAttribute="trailing" id="iGK-hL-1pZ"/>
+                            <constraint firstItem="KXa-6k-ISa" firstAttribute="trailing" secondItem="9tQ-ag-1Tt" secondAttribute="trailing" id="jlN-h0-sAz"/>
+                            <constraint firstItem="KXa-6k-ISa" firstAttribute="bottom" secondItem="9tQ-ag-1Tt" secondAttribute="bottom" id="p4k-6d-wPo"/>
+                            <constraint firstItem="9dL-bZ-hnx" firstAttribute="top" secondItem="pWb-JB-jaS" secondAttribute="bottom" constant="36" id="v0i-UW-UtT"/>
+                            <constraint firstItem="KXa-6k-ISa" firstAttribute="trailing" secondItem="pWb-JB-jaS" secondAttribute="trailing" constant="20" id="yHQ-gB-vuA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="navigationView" destination="cmg-vC-W94" id="Fck-dW-bVr"/>
+                        <outlet property="nicknameTextField" destination="9dL-bZ-hnx" id="dSE-qw-OcR"/>
+                        <outlet property="signUpButton" destination="9tQ-ag-1Tt" id="Cd2-VM-mMt"/>
+                        <outlet property="signUpButtonBottomConstraint" destination="p4k-6d-wPo" id="C0V-Vh-7IY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7T5-uM-Lyk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="321.73913043478262" y="-182.14285714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
