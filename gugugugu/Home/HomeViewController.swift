@@ -16,9 +16,13 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var letterWriteButton: UIButton!
 
     @IBAction func letterWriteButtonTouchUpInside(_ sender: UIButton) {
-        guard let viewController = UIStoryboard(name: "Letter", bundle: nil).instantiateViewController(withIdentifier: "Letter") as? LetterToViewController else { return }
-        viewController.modalPresentationStyle = .fullScreen
-        present(viewController, animated: true, completion: nil)
+        guard let viewController = UIStoryboard(name: "Letter", bundle: nil).instantiateViewController(withIdentifier: LetterToViewController.identifier) as? LetterToViewController else {
+            return
+        }
+        let navigationController = UINavigationController(rootViewController: viewController)
+        navigationController.modalPresentationStyle = .fullScreen
+        present(navigationController, animated: true)
+       
     }
     
     var letters: [String] = ["다람쥐", "미노스", "주의하라", "브랜"]

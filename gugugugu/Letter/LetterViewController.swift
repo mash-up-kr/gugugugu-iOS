@@ -16,7 +16,7 @@ class LetterToViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet private weak var toAndTitleView: UIView?
     @IBOutlet private weak var letterCategoryLabel: UILabel?
     @IBOutlet private weak var letterToLabel: UILabel?
-    @IBOutlet private weak var letterFromLabel: UILabel?
+    @IBOutlet  private weak var letterFromLabel: UILabel?
     @IBOutlet private weak var seperationView: UIView?
     @IBOutlet private weak var inputLabel: UILabel?
     @IBOutlet private weak var sequenceView: UIView?

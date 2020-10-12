@@ -33,6 +33,8 @@
 		D5E1BD9A25304B7F00E2CC70 /* LeftBarButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E1BD9925304B7F00E2CC70 /* LeftBarButtonType.swift */; };
 		D5E1BD9F2530520D00E2CC70 /* LetterTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E1BD9E2530520D00E2CC70 /* LetterTheme.swift */; };
 		E38986B42514F31E004B922A /* Promises in Frameworks */ = {isa = PBXBuildFile; productRef = E38986B32514F31E004B922A /* Promises */; };
+		E3AF3A17253152A4006E7B6C /* LetterCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AF3A16253152A4006E7B6C /* LetterCategory.swift */; };
+		E3AF3A1B2531EA91006E7B6C /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AF3A1A2531EA91006E7B6C /* StoryboardIdentifiable.swift */; };
 		E3BBEA8024F8BA2F00B98749 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E3BBEA7F24F8BA2F00B98749 /* Kingfisher */; };
 		E3BBEA8324F8BB1100B98749 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E3BBEA8224F8BB1100B98749 /* Alamofire */; };
 		E3BBEA8624F8BC0300B98749 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = E3BBEA8524F8BC0300B98749 /* Moya */; };
@@ -68,6 +70,8 @@
 		D5E1BD952530455800E2CC70 /* MinimumButtonSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimumButtonSize.swift; sourceTree = "<group>"; };
 		D5E1BD9925304B7F00E2CC70 /* LeftBarButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftBarButtonType.swift; sourceTree = "<group>"; };
 		D5E1BD9E2530520D00E2CC70 /* LetterTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterTheme.swift; sourceTree = "<group>"; };
+		E3AF3A16253152A4006E7B6C /* LetterCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterCategory.swift; sourceTree = "<group>"; };
+		E3AF3A1A2531EA91006E7B6C /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
 		E3C17A1F24CC28360083F54D /* Letter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Letter.storyboard; sourceTree = "<group>"; };
 		E3C17A2124CC28600083F54D /* LetterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				A56A26B224CC0BF0003E6553 /* gugugugu */,
+				E3AF3A192531EA77006E7B6C /* Utility */,
 				A56A26B124CC0BF0003E6553 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -202,9 +207,26 @@
 			path = Theme;
 			sourceTree = "<group>";
 		};
+		E3AF3A15253152A4006E7B6C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E3AF3A16253152A4006E7B6C /* LetterCategory.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E3AF3A192531EA77006E7B6C /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				E3AF3A1A2531EA91006E7B6C /* StoryboardIdentifiable.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		E3C17A1E24CC28280083F54D /* Letter */ = {
 			isa = PBXGroup;
 			children = (
+				E3AF3A15253152A4006E7B6C /* Model */,
 				E3C17A1F24CC28360083F54D /* Letter.storyboard */,
 				E3C17A2124CC28600083F54D /* LetterViewController.swift */,
 			);
@@ -301,12 +323,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5E1BD9A25304B7F00E2CC70 /* LeftBarButtonType.swift in Sources */,
+				E3AF3A17253152A4006E7B6C /* LetterCategory.swift in Sources */,
 				D5722A1724CCABA50040EA63 /* Letter.swift in Sources */,
 				D5722A1424CCAB540040EA63 /* LetterBoxViewController.swift in Sources */,
 				D5E1BD962530455800E2CC70 /* MinimumButtonSize.swift in Sources */,
 				D56A40022530AD3C00AF7035 /* TransparentSegmentControl.swift in Sources */,
 				D56A40062530C9FF00AF7035 /* LetterBoxHeaderView.swift in Sources */,
 				A56A26CC24CC22A1003E6553 /* HomeViewController.swift in Sources */,
+				E3AF3A1B2531EA91006E7B6C /* StoryboardIdentifiable.swift in Sources */,
 				A56A26D524CC7641003E6553 /* HomeTitleView.swift in Sources */,
 				D5722A1924CCB3D10040EA63 /* LetterBoxTableViewCell.swift in Sources */,
 				A56A26BA24CC0BF0003E6553 /* SecondViewController.swift in Sources */,
