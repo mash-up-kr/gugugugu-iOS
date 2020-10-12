@@ -10,7 +10,7 @@ import Foundation
 import Promises
 import Moya
 
-struct User {
+struct User: Codable {
     var userID: Int
     var name: String
     var nickname: String
@@ -38,7 +38,7 @@ enum APITarget {
 
 extension APITarget: TargetType {
 
-    var baseURL: URL { return URL(string: "https://api.myservice.com")! }
+    var baseURL: URL { return URL(string: "http://dummy.restapiexample.com/api/v1/")! }
     var path: String {
         switch self {
         case .signUp:

@@ -77,3 +77,8 @@ extension HomeViewController: UICollectionViewDataSource {
         return letters.count
     }
 }
+
+// MARK: - StoryboardInstanceable
+extension HomeViewController: StoryboardInstanceable {
+    static var storyboardName: String { "Home" }
+}
